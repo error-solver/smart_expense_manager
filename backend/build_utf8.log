@@ -1,0 +1,79 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.example:backend >-------------------------
+[INFO] Building backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ backend ---
+[INFO] Deleting C:\Users\sachi\OneDrive\Desktop\Software_engg_project\backend\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ backend ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ backend ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 34 source files with javac [debug parameters release 21] to target\classes
+[INFO] /C:/Users/sachi/OneDrive/Desktop/Software_engg_project/backend/src/main/java/com/example/backend/security/JwtAuthenticationFilter.java: C:\Users\sachi\OneDrive\Desktop\Software_engg_project\backend\src\main\java\com\example\backend\security\JwtAuthenticationFilter.java uses or overrides a deprecated API.
+[INFO] /C:/Users/sachi/OneDrive/Desktop/Software_engg_project/backend/src/main/java/com/example/backend/security/JwtAuthenticationFilter.java: Recompile with -Xlint:deprecation for details.
+[INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/sachi/OneDrive/Desktop/Software_engg_project/backend/src/main/java/com/example/backend/security/JwtUtil.java:[45,17] no suitable method found for signWith(java.security.Key,io.jsonwebtoken.security.MacAlgorithm)
+    method io.jsonwebtoken.JwtBuilder.signWith(io.jsonwebtoken.SignatureAlgorithm,byte[]) is not applicable
+      (argument mismatch; java.security.Key cannot be converted to io.jsonwebtoken.SignatureAlgorithm)
+    method io.jsonwebtoken.JwtBuilder.signWith(io.jsonwebtoken.SignatureAlgorithm,java.lang.String) is not applicable
+      (argument mismatch; java.security.Key cannot be converted to io.jsonwebtoken.SignatureAlgorithm)
+    method io.jsonwebtoken.JwtBuilder.signWith(io.jsonwebtoken.SignatureAlgorithm,java.security.Key) is not applicable
+      (argument mismatch; java.security.Key cannot be converted to io.jsonwebtoken.SignatureAlgorithm)
+    method io.jsonwebtoken.JwtBuilder.signWith(java.security.Key,io.jsonwebtoken.SignatureAlgorithm) is not applicable
+      (argument mismatch; io.jsonwebtoken.security.MacAlgorithm cannot be converted to io.jsonwebtoken.SignatureAlgorithm)
+    method io.jsonwebtoken.JwtBuilder.<K>signWith(K,io.jsonwebtoken.security.SecureDigestAlgorithm<? super K,?>) is not applicable
+      (inference variable K has incompatible bounds
+        upper bounds: javax.crypto.SecretKey,java.security.Key
+        lower bounds: java.security.Key)
+[ERROR] /C:/Users/sachi/OneDrive/Desktop/Software_engg_project/backend/src/main/java/com/example/backend/security/AppConfig.java:[23,50] constructor DaoAuthenticationProvider in class org.springframework.security.authentication.dao.DaoAuthenticationProvider cannot be applied to given types;
+  required: org.springframework.security.core.userdetails.UserDetailsService
+  found:    no arguments
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/sachi/OneDrive/Desktop/Software_engg_project/backend/src/main/java/com/example/backend/security/AppConfig.java:[24,21] cannot find symbol
+  symbol:   method setUserDetailsService(com.example.backend.security.CustomUserDetailsService)
+  location: variable authProvider of type org.springframework.security.authentication.dao.DaoAuthenticationProvider
+[INFO] 3 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.553 s
+[INFO] Finished at: 2026-04-07T11:11:06+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.1:compile (default-compile) on project backend: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/sachi/OneDrive/Desktop/Software_engg_project/backend/src/main/java/com/example/backend/security/JwtUtil.java:[45,17] no suitable method found for signWith(java.security.Key,io.jsonwebtoken.security.MacAlgorithm)
+[ERROR]     method io.jsonwebtoken.JwtBuilder.signWith(io.jsonwebtoken.SignatureAlgorithm,byte[]) is not applicable
+[ERROR]       (argument mismatch; java.security.Key cannot be converted to io.jsonwebtoken.SignatureAlgorithm)
+[ERROR]     method io.jsonwebtoken.JwtBuilder.signWith(io.jsonwebtoken.SignatureAlgorithm,java.lang.String) is not applicable
+[ERROR]       (argument mismatch; java.security.Key cannot be converted to io.jsonwebtoken.SignatureAlgorithm)
+[ERROR]     method io.jsonwebtoken.JwtBuilder.signWith(io.jsonwebtoken.SignatureAlgorithm,java.security.Key) is not applicable
+[ERROR]       (argument mismatch; java.security.Key cannot be converted to io.jsonwebtoken.SignatureAlgorithm)
+[ERROR]     method io.jsonwebtoken.JwtBuilder.signWith(java.security.Key,io.jsonwebtoken.SignatureAlgorithm) is not applicable
+[ERROR]       (argument mismatch; io.jsonwebtoken.security.MacAlgorithm cannot be converted to io.jsonwebtoken.SignatureAlgorithm)
+[ERROR]     method io.jsonwebtoken.JwtBuilder.<K>signWith(K,io.jsonwebtoken.security.SecureDigestAlgorithm<? super K,?>) is not applicable
+[ERROR]       (inference variable K has incompatible bounds
+[ERROR]         upper bounds: javax.crypto.SecretKey,java.security.Key
+[ERROR]         lower bounds: java.security.Key)
+[ERROR] /C:/Users/sachi/OneDrive/Desktop/Software_engg_project/backend/src/main/java/com/example/backend/security/AppConfig.java:[23,50] constructor DaoAuthenticationProvider in class org.springframework.security.authentication.dao.DaoAuthenticationProvider cannot be applied to given types;
+[ERROR]   required: org.springframework.security.core.userdetails.UserDetailsService
+[ERROR]   found:    no arguments
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/sachi/OneDrive/Desktop/Software_engg_project/backend/src/main/java/com/example/backend/security/AppConfig.java:[24,21] cannot find symbol
+[ERROR]   symbol:   method setUserDetailsService(com.example.backend.security.CustomUserDetailsService)
+[ERROR]   location: variable authProvider of type org.springframework.security.authentication.dao.DaoAuthenticationProvider
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
